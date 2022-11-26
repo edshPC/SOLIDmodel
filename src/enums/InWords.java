@@ -1,7 +1,7 @@
 package enums;
 
 public enum InWords {
-	TRUTH("Правда, "),
+	TRUTH("Правда,"),
 	BUT(", но "),
 	BI("бы"),
 	IF(", если "),

@@ -21,8 +21,8 @@ public class main {
 		Twillight twill = new Twillight();
 			
 		System.out.println(
-				InWords.TRUTH + mom.isAllowing(false, Actions.FLY, carlson) + " " + roof.cuda() + InWords.BUT + "об этом " +
-				malysh + " " + malysh.forgot(Adverbs.TOTALLY) + InWords.AND + malysh.surprised(Adverbs.REALLY) + " " +
+				InWords.TRUTH + " " + mom + " " + mom.isAllowing(false, Actions.FLY, carlson) + " " + roof.cuda() + InWords.BUT +
+				"об этом " + malysh + " " + malysh.forgot(Adverbs.TOTALLY) + InWords.AND + malysh.surprised(Adverbs.REALLY) + " " +
 				InWords.BI + InWords.IF + InWords.BI + " " + smb + " " + smb.remind("ему", "об этом") + "."
 			);
 		
