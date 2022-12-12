@@ -22,6 +22,6 @@ public class House extends Place implements IPointers {
 	}
 	@Override
 	public String kChemu() {
-		return "ê " + name.substring(0, name.length()-1) + "ó";
+		return "ê " + name + "ó";
 	}
 }
