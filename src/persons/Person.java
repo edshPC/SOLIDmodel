@@ -2,7 +2,7 @@ package persons;
 
 import organs.Heart;
 
-abstract public class Person implements ISetPretext {
+abstract public class Person implements ISetPretext, IReplies {
 	
 	private static int lastId = 0;
 	
@@ -37,6 +37,14 @@ abstract public class Person implements ISetPretext {
 	public String onHim() {
 		return "у него";
 	}
+	@Override
+	public String toWhom() {
+		return this + "у";
+	}
+	@Override
+	public String sayWhat(String phrase) {
+		return this + " сказал, что это, мол, " + phrase;
+	}
 	
 	@Override
 	public String toString() {
@@ -56,6 +64,21 @@ abstract public class Person implements ISetPretext {
 			return false;
 		
 		Person p = (Person) o;
-		return p.hashCode() == this.id;
+		class IdChecker implements IEqualChecker {
+			private int id1;
+			private int id2;
+			public IdChecker(int id1, int id2) {
+				this.id1 = id1;
+				this.id2 = id2;
+			}
+			
+			@Override
+			public boolean checkIds() {
+				return id1 == id2;
+			}
+		}
+		IdChecker checker = new IdChecker(this.id, p.hashCode());
+		
+		return checker.checkIds();
 	}
 }

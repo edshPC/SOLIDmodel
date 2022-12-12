@@ -9,12 +9,18 @@ public class Heart extends Organ implements IYocking{
 	}
 	
 	@Override
-	public String startYoking() {
+	public String startYoking() throws CantYokingExeption {
+		if(isYocking)
+			throw new CantYokingExeption("—ердце уже екает");
+		
 		isYocking = true;
 		return "начало екать";
 	}
 	@Override
-	public String notYoking() {
+	public String notYoking() throws CantYokingExeption {
+		if(!isYocking)
+			throw new CantYokingExeption("—ердце и так не екает");
+			
 		isYocking = false;
 		return "не екает";
 	}
@@ -23,6 +29,12 @@ public class Heart extends Organ implements IYocking{
 		if (isYocking)
 			return "екало";
 		return "не екало";
+	}
+	
+	public static class CantYokingExeption extends RuntimeException {
+		CantYokingExeption(String msg) {
+			super(msg);
+		}
 	}
 	 
 	@Override

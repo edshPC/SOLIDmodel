@@ -1,5 +1,6 @@
 package organs;
 
+import persons.IEqualChecker;
 
 abstract public class Organ {
 	
@@ -20,6 +21,19 @@ abstract public class Organ {
 			return false;
 		
 		Organ org = (Organ) o;
-		return org.hashCode() == this.id;
+		IEqualChecker checker = new IEqualChecker() {
+			private int id1;
+			private int id2;
+			{
+				this.id1 = Organ.this.id;
+				this.id2 = org.hashCode();
+			}
+			@Override
+			public boolean checkIds() {
+				// TODO Auto-generated method stub
+				return id1==id2;
+			}
+		};
+		return checker.checkIds();
 	}
 }

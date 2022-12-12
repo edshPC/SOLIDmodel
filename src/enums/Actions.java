@@ -1,7 +1,8 @@
 package enums;
 
 public enum Actions {
-	FLY("летать");
+	FLY("летать"),
+	GIVEINCASE("в случае необохимости давать");
 	
 	
 	private String value;

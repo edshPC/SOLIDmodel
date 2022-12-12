@@ -4,7 +4,8 @@ public enum Adverbs {
 	TOTALLY("совсем"),
 	REALLY("искренне"),
 	FAST("стремительно"),
-	SO("такими");
+	SO("такими"),
+	JUSTSPECIAL("словно специально");
 	
 	
 	private String value;

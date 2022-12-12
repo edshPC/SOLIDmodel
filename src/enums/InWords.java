@@ -9,7 +9,8 @@ public enum InWords {
 	EVEN("даже"),
 	WHEN(", когда "),
 	STRAIGHT("прямо"),
-	AS("Таких");
+	AS("Таких"),
+	ANDNOW("А сейчас ");
 	
 	
 	private String value;

@@ -18,6 +18,15 @@ public class Carlson extends Person {
 	public Neck getNeck() {
 		return neck;
 	}
+	public String startVorch() {
+		return this + " стал ворчать";
+	}
+	public String dontAttend(String what) {
+		return this + " не обращал на " + what + " никакого внимания";
+	}
+	public String understand(String what) {
+		return this + " так же ясно понимал, что " + what;
+	}
 	
 	@Override
 	public String thirdName() {

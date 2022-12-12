@@ -2,6 +2,8 @@ package persons;
 
 import enums.*;
 import organs.*;
+import places.Place;
+import things.Food;
 
 public class Child extends Person {
 	
@@ -35,6 +37,15 @@ public class Child extends Person {
 	public String flyUp(Adverbs how) {
 		return how + " взлетал ввысь";
 	}
+	public String goThrough(String cuda) {
+		return this + " пробрался " + cuda;
+	}
+	public String understand(String what) {
+		return this + " ясно понимал, что " + what;
+	}
+	public String enjoy(String what, Place where) {
+		return this + " любовался " + what + " " + where.gde();
+	}
 	
 	public Arm getArm() {
 		return arm;
@@ -43,6 +54,21 @@ public class Child extends Person {
 	@Override
 	public String thirdName() {
 		return "он";
+	}
+	
+	public class Bun extends Food {
+		public Bun() {
+			super("булочка", 10);
+		}
+		public String returnWith() {
+			return "вернулся, нагруженный " + this + "ми";
+		}
+		public String oneAnother() {
+			return "булочку-другую";
+		}
+		public String thisBunsNotSameThatAnother() {
+			return "эти булочки совсем не похожи на другие булочки, которые печет мама " + Child.this + "а";
+		}
 	}
 	
 	@Override

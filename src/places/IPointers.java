@@ -1,7 +1,7 @@
 package places;
 
 public interface IPointers {
-	public String cuda();
-	public String kChemu();
-	public String gde();
+	String cuda();
+	String kChemu();
+	String gde();
 }

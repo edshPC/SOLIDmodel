@@ -13,8 +13,8 @@ public class Mom extends Person implements IAllowing {
 	}
 	
 	@Override
-	public String isAllowing(boolean isAllow, Actions act, Person p) {
-		String base = "разрешала " + act + " " + p.with();
+	public String isAllowing(boolean isAllow, Actions act, String with) {
+		String base = "разрешала " + act + " " + with;
 		if(!isAllow)
 			return "не " + base;
 		return base;
